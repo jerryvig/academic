@@ -35,6 +35,12 @@ Collection.prototype.insert = function (obj) {
 
 Collection.prototype.find = function (query) {
 	var data = this.getData();
-	
+	var result = {};
+
+	/* query = {'age':60}; */
+	for (var key in data) {
+		if (data[key][query])
+	}
+
 };
 
