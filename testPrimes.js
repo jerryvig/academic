@@ -76,3 +76,9 @@ test('Input n=10 should return [1, 2, 3, 5, 7, 11, 13, 17, 19, 23].', function (
 		expected = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23];
 	deepEqual(output, expected, 'It should return [1, 2, 3, 5, 7, 11, 13, 17, 19, 23].');
 });
+
+test('Input n=20 should return [1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67].', function () {
+	var output = getPrimes(20),
+		expected = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67];
+	deepEqual(output, expected, 'It should have the expected output.');
+});

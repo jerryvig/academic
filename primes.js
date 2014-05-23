@@ -37,7 +37,7 @@ function getPrimes (n) {
 		return primes;
 	}
 
-	for (i=3; i<MAX_NUMBER; i++) {
+	for (i=3; i<MAX_NUMBER; i+=2) {
 		isPrime = true;
 
 		for (j=1; j<primes.length; j++) {
