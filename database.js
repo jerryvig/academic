@@ -35,8 +35,9 @@ Collection.prototype.insert = function (obj) {
 
 Collection.prototype.find = function (query) {
 	var data = this.getData(),
-		result = {},
-		resultCount = 0;
+		result = {
+			length: 0
+		};
 
 	/*  query = {'age':32}; 
 		query = {'name':'Jerry'}
@@ -44,8 +45,8 @@ Collection.prototype.find = function (query) {
 	for (var key in data) {
 		for (var queryKey in query) {
 			if (data[key][queryKey] === query[queryKey]) {
-				result[resultCount] = data[key];
-				resultCount++;
+				result[result.length] = data[key];
+				result.length++;
 			}
 		}
 	}
