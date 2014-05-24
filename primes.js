@@ -18,7 +18,7 @@ function getPrimes (n) {
 	}
 
 	if (n < 0) {
-		throw 'Input must be a positive integer.';
+		throw '"' + n + '"' + ' is not a positive integer.';
 	}
 
 	if (n === 0) {

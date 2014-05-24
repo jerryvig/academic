@@ -34,13 +34,21 @@ Collection.prototype.insert = function (obj) {
 };
 
 Collection.prototype.find = function (query) {
-	var data = this.getData();
-	var result = {};
+	var data = this.getData(),
+		result = {},
+		resultCount = 0;
 
-	/* query = {'age':60}; */
+	/*  query = {'age':32}; 
+		query = {'name':'Jerry'}
+	*/
 	for (var key in data) {
-		if (data[key][query])
+		for (var queryKey in query) {
+			if (data[key][queryKey] === query[queryKey]) {
+				result[resultCount] = data[key];
+				resultCount++;
+			}
+		}
 	}
 
+	return result;
 };
-
